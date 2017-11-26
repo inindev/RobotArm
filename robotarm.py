@@ -13,7 +13,7 @@
 
 #
 # udev rule to allow non-root access to arm
-# echo ACTION==\"add\", SUBSYSTEM==\"usb\", ATTR{idVendor}==\"1267\" ,ATTR{idProduct}==\"0000\", MODE=\"0666\" | sudo tee -a /etc/udev/rules.d/95-robot.rules
+# echo -e '# allow regular users to access OWI Robotic Arm Edge with USB Interface kit\nATTRS{idVendor}=="1267", ATTRS{idProduct}=="0000", SUBSYSTEMS=="usb", ACTION=="add", MODE="0666", GROUP="plugdev"' | sudo tee -a /etc/udev/rules.d/95-robotarm.rules
 #
 
 import time
