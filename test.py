@@ -5,7 +5,7 @@
 #   https://www.apache.org/licenses/LICENSE-2.0
 #
 
-import robotarm
+from robotarm import RobotArm
 
 
 robot_arm = RobotArm()
