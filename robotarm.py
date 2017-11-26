@@ -1,5 +1,5 @@
 #
-# RobotArm.py
+# robotarm.py
 #
 #   copyright 2017 John Clark, apache 2.0 license
 #   https://www.apache.org/licenses/LICENSE-2.0
@@ -107,3 +107,4 @@ class RobotArm:
     light = Part('light', dev) \
         .add_action('off',   [0, 0, 0]) \
         .add_action('on',    [0, 0, 1])
+
