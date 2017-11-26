@@ -66,7 +66,7 @@ class Part:
 
     def add_action(self, name, msg):
         def action(duration_ms=0):
-            print('{0}.{1}, msg = {2}, duration = {3} ms'.format(self.name, name, msg, duration_ms))
+#            print('{0}.{1}, msg = {2}, duration = {3} ms'.format(self.name, name, msg, duration_ms))
             self.dev.send_merge(msg)
             if(duration_ms > 0):
                 self.sleep_ms(duration_ms)
@@ -74,7 +74,7 @@ class Part:
         setattr(self, name, action)
 
         def stop():
-            print('{0}.{1}.stop, msg = {2}'.format(self.name, name, msg))
+#            print('{0}.{1}.stop, msg = {2}'.format(self.name, name, msg))
             self.dev.send_remove(msg)
         setattr(action, 'stop', stop)
 
